@@ -1,0 +1,163 @@
+# OSX
+.DS_Store
+
+# Xcode
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+**/.xcode.env.local
+
+# Android/IntelliJ
+build/
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
+.cxx/
+*.keystore
+!debug.keystore
+.kotlin/
+
+# Node.js
+node_modules/
+jspm_packages/
+.npm
+.yarn-integrity
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage & Testing
+coverage/
+*.lcov
+.nyc_output
+jest-coverage/
+lib-cov
+
+# TypeScript
+*.tsbuildinfo
+
+# ESLint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache directories
+.cache
+.parcel-cache
+.metro/
+.metro-health-check*
+
+# Build outputs
+dist/
+build/
+*.apk
+*.aab
+*.ipa
+*.app.dSYM.zip
+*.app.dSYM
+*.jsbundle
+
+# Next.js / Nuxt.js / Gatsby (if used)
+.next
+out
+.nuxt
+public
+storybook-static
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# React Native / Expo
+.expo/
+.expo-shared/
+
+# Fastlane
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+
+# Ruby / CocoaPods
+**/Pods/
+/vendor/bundle/
+
+# Generated files
+*.generated.*
+*.gen.*
+generated/
+
+# Unused code / Dead code / Deprecated code
+unused/
+dead-code/
+deprecated/
+.old/
+*.old
+*.bak
+*.backup
+*.orig
+
+# Husky (keep hooks, ignore other files in _ directory)
+.husky/_/*
+!.husky/_/husky.sh
+
+# Misc
+*.pem
