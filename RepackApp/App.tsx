@@ -1,10 +1,15 @@
+import './nativewind.css';
+
 import React, { useEffect } from 'react';
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
 import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+  Button,
+  StatusBar,
+  StyleSheet,
+  Text,
+  useColorScheme,
+  View,
+} from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import RNBootSplash from 'react-native-bootsplash';
 
 function App() {
@@ -23,21 +28,27 @@ function App() {
 }
 
 function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
-
   return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View>
+        <View className="flex-1 bg-green-500 justify-center items-center">
+          <Text className="text-white text-2xl font-bold mb-4">
+            NativeWind is configured! 🎉
+          </Text>
+          <Button title="Press me" onPress={() => console.log('Pressed')} />
+        </View>
+      </View>
+      <View className="flex-1 bg-green-500 justify-center items-center">
+        <Text className="text-red-500">Hello</Text>
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'transparent',
   },
 });
 
