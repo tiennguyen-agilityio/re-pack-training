@@ -16,18 +16,22 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^2.1.0",
+    "@tanstack/react-query": "^5.59.0",
     "nativewind": "^4.0.1",
     "react": "19.1.0",
     "react-native": "0.81.5",
     "react-native-bootsplash": "^6.3.11",
     "react-native-reanimated": "^4.2.1",
     "react-native-safe-area-context": "^5.5.2",
-    "react-native-worklets": "^0.7.1"
+    "react-native-worklets": "^0.7.1",
+    "zustand": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
     "@babel/runtime": "^7.25.0",
+    "babel-plugin-module-resolver": "^5.0.2",
     "@callstack/repack": "^5.2.3",
     "@callstack/repack-plugin-nativewind": "^5.2.3",
     "@callstack/repack-plugin-reanimated": "^5.2.3",
