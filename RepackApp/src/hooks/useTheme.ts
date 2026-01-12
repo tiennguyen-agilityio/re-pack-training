@@ -3,7 +3,14 @@ import { useColorScheme } from 'react-native';
 // Stores
 import { useThemeStore } from '@/stores/theme';
 
+// Interfaces
+import { Theme } from '@/interfaces/style';
+
+// Themes
+import { lightThemes, darkThemes } from '@/themes';
+
 export const useTheme = (): {
+  theme: Theme;
   isDark: boolean;
   colorScheme: 'light' | 'dark' | 'system';
   setColorScheme: (scheme: 'light' | 'dark' | 'system') => Promise<void>;
@@ -15,7 +22,10 @@ export const useTheme = (): {
   const actualIsDark =
     colorScheme === 'system' ? systemColorScheme === 'dark' : isDark;
 
+  const theme = actualIsDark ? darkThemes : lightThemes;
+
   return {
+    theme,
     isDark: actualIsDark,
     colorScheme,
     setColorScheme,

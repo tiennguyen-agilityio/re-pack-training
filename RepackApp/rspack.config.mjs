@@ -24,6 +24,14 @@ export default Repack.defineRspackConfig({
   },
   module: {
     rules: [
+			{
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'react-native-svg-transformer',
+          },
+        ],
+      },
       {
         test: /\.[cm]?[jt]sx?$/,
         type: 'javascript/auto',
