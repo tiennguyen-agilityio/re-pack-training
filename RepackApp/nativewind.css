@@ -5,8 +5,23 @@
 @layer base {
   :root {
     --color-primary: #000;
+    --color-light: #fff;
     --color-secondary: #f3f3f3;
+		--color-tertiary: #343434;
+		--color-quaternary: #737680;
+		--color-quinary: #33302e26;
+		--color-senary: #9d9d9d;
+		--color-septenary: #bebfc4;
+
     --color-background: #fff;
+		--bg-icon-form: #508a7b;
+		--bg-method-selected: #fafafa;
+
+		--color-error: #981b1f;
+		--color-success: #5ece7b;
+		--color-info: #3266CE;
+		--color-favorite: #ef466f;
+
 		--font-family-primary: 'ProductSansMedium';
 		--font-family-secondary: 'Nunito-Medium';
 		--font-family-tertiary: 'Roboto-Medium';
@@ -15,6 +30,23 @@
   .dark {
     --color-primary: #fff;
     --color-secondary: #23262f;
+		--color-tertiary: #fcfcfd;
+		--color-quaternary: #e6e8fc;
+    --color-quinary: #23262f;
+    --color-senary: #e6e8fc;
+    --color-septenary: #e6e8fc;
+
     --color-background: #000;
+		--bg-icon-form: #508a7b;
+		--bg-method-selected: #23262f;
+
+		--color-error: #981b1f;
+		--color-success: #5ece7b;
+		--color-info: #3266CE;
+		--color-favorite: #ef466f;
+
+		--font-family-primary: 'ProductSansMedium';
+		--font-family-secondary: 'Nunito-Medium';
+		--font-family-tertiary: 'Roboto-Medium';
   }
 }

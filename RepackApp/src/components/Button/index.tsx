@@ -1,4 +1,5 @@
 import { memo, ReactNode } from 'react';
+import { twMerge } from 'tailwind-merge';
 import {
   TouchableOpacity,
   Text,
@@ -15,7 +16,7 @@ export const buttonSize = {
 export const buttonVariant = {
   solid: 'bg-primary',
   outlined: 'border border-primary',
-  ghost: 'bg-secondary',
+  ghost: 'bg-transparent',
 };
 
 export const buttonTextSize = {
@@ -54,24 +55,20 @@ const Button = ({
   textClassName,
   ...restProps
 }: ButtonProps) => {
-  const containerClassName = [
+  const containerClassName = twMerge(
     'flex-1flex-row justify-center items-center gap-[15px] rounded-[25px] w-full',
     buttonVariant[variant],
     buttonSize[size],
     disabled && 'opacity-50',
     className,
-  ]
-    .filter(Boolean)
-    .join(' ');
+  );
 
-  const finalTextClassName = [
+  const finalTextClassName = twMerge(
     'text-center rounded-[25px] font-primary',
     buttonTextVariant[variant],
     buttonTextSize[size],
     textClassName,
-  ]
-    .filter(Boolean)
-    .join(' ');
+  );
 
   return (
     <TouchableOpacity
