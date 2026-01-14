@@ -1,30 +1,7 @@
 import React, { Suspense, lazy, Component, ErrorInfo, ReactNode } from 'react';
 import { View, Text, ActivityIndicator } from 'react-native';
 
-const ProfileRemoteComponent = lazy(() => {
-  console.log('[ProfileRemote] Attempting to load ProfileRemote/Profile...');
-  return import('ProfileRemote/Profile')
-    .then(module => {
-      console.log('[ProfileRemote] Successfully loaded:', module);
-      // Profile component is exported as default
-      if (module.default) {
-        return module;
-      } else {
-        throw new Error(
-          'Profile component not found in module (no default export)',
-        );
-      }
-    })
-    .catch(error => {
-      console.error('[ProfileRemote] Failed to load:', error);
-      console.error('[ProfileRemote] Error details:', {
-        message: error.message,
-        stack: error.stack,
-        name: error.name,
-      });
-      throw error; // Re-throw để Suspense có thể handle
-    });
-});
+const ProfileRemoteComponent = lazy(() => import('ProfileRemote/Profile'));
 
 interface ProfileRemoteProps {
   userName?: string;
@@ -69,17 +46,6 @@ class ProfileRemoteErrorBoundary extends Component<
             }}
           >
             Failed to load ProfileRemote
-          </Text>
-          <Text
-            style={{
-              fontSize: 14,
-              color: '#666',
-              textAlign: 'center',
-              marginBottom: 10,
-            }}
-          >
-            Make sure ProfileRemote is running on port 8082{'\n'}
-            Start it with: cd ProfileRemote && pnpm start
           </Text>
           {this.state.error && (
             <Text style={{ fontSize: 12, color: '#999', textAlign: 'center' }}>
