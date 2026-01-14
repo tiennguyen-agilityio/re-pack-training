@@ -16,6 +16,7 @@ specifiers:
   '@react-native/eslint-config': 0.81.5
   '@react-native/metro-config': 0.81.5
   '@react-native/typescript-config': 0.81.5
+  '@react-navigation/bottom-tabs': ^7.9.1
   '@react-navigation/native': ^7.1.27
   '@react-navigation/native-stack': ^7.9.1
   '@rsdoctor/rspack-plugin': ^1.4.0
@@ -60,6 +61,7 @@ specifiers:
 dependencies:
   '@module-federation/enhanced': 0.22.1_a57tcub4czj6t6fbyxjjpnu52a
   '@react-native-async-storage/async-storage': 2.2.0_react-native@0.81.5
+  '@react-navigation/bottom-tabs': 7.9.1_yx3k33vmuuprwmfb4zk6xsa3n4
   '@react-navigation/native': 7.1.27_k6evhlf74odk2oi5umdutyoonu
   '@react-navigation/native-stack': 7.9.1_yx3k33vmuuprwmfb4zk6xsa3n4
   '@rsdoctor/rspack-plugin': 1.4.0_@rspack+core@1.7.1
@@ -2794,6 +2796,27 @@ packages:
       nullthrows: 1.1.1
       react: 19.1.0
       react-native: 0.81.5_dntpdueijimqpewdzwllhanpoq
+
+  /@react-navigation/bottom-tabs/7.9.1_yx3k33vmuuprwmfb4zk6xsa3n4:
+    resolution: {integrity: sha512-1MHn1b5tWFa8t8LXUvaNtlg5WGVXcNTsiV00ygQDBFDusMcu0ZPOU1exqELZwHf6kDntmTQE96/NRM+Cd2QR+A==}
+    peerDependencies:
+      '@react-navigation/native': ^7.1.27
+      react: '>= 18.2.0'
+      react-native: '*'
+      react-native-safe-area-context: '>= 4.0.0'
+      react-native-screens: '>= 4.0.0'
+    dependencies:
+      '@react-navigation/elements': 2.9.4_5n5gw6dcxmfvkfn3gwdqlyknhu
+      '@react-navigation/native': 7.1.27_k6evhlf74odk2oi5umdutyoonu
+      color: 4.2.3
+      react: 19.1.0
+      react-native: 0.81.5_dntpdueijimqpewdzwllhanpoq
+      react-native-safe-area-context: 5.6.2_k6evhlf74odk2oi5umdutyoonu
+      react-native-screens: 4.19.0_k6evhlf74odk2oi5umdutyoonu
+      sf-symbols-typescript: 2.2.0
+    transitivePeerDependencies:
+      - '@react-native-masked-view/masked-view'
+    dev: false
 
   /@react-navigation/core/7.13.7_react@19.1.0:
     resolution: {integrity: sha512-k2ABo3250vq1ovOh/iVwXS6Hwr5PVRGXoPh/ewVFOOuEKTvOx9i//OBzt8EF+HokBxS2HBRlR2b+aCOmscRqBw==}

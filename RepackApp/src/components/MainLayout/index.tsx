@@ -9,15 +9,17 @@ import { View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
 
 interface MainLayoutProps {
+  className?: string;
   children: ReactNode;
 }
 
-const MainLayout = ({ children }: MainLayoutProps) => {
+const MainLayout = ({ children, className = '' }: MainLayoutProps) => {
   const { isDark } = useTheme();
 
   const wrapperClassName = twMerge(
     'flex-1 bg-background text-primary',
     isDark && 'dark',
+    className,
   );
 
   return (

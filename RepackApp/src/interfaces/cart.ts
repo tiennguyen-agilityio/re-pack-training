@@ -6,8 +6,9 @@ export interface ProductItem {
 }
 
 export interface Cart {
-  product?: ProductItem;
+  product: ProductItem;
   quantity: number;
   sizes: string;
   colors: string;
+  isChecked?: boolean;
 }

@@ -13,7 +13,7 @@ import { useTheme } from '@/hooks/useTheme';
 import { useAuthStore } from '@/stores/auth';
 
 // Screens
-import HomeScreen from '@/screens/Home';
+import TabStack from './TabStack';
 import LoginScreen from '@/screens/Login';
 
 const AppStack = createNativeStackNavigator();
@@ -36,7 +36,7 @@ export const Navigation = () => {
             }}
           >
             {isAuthenticated ? (
-              <AppStack.Screen name={SCREENS.HOME} component={HomeScreen} />
+              <AppStack.Screen name={SCREENS.TABS} component={TabStack} />
             ) : (
               <AppStack.Screen name={SCREENS.LOGIN} component={LoginScreen} />
             )}
